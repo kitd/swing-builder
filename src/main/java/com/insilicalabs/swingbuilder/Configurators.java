@@ -30,6 +30,7 @@ import static com.insilicalabs.swingbuilder.SwingBuilderBase.isDummy;
 /**
  * Created by jzwolak on 3/5/16.
  */
+@SuppressWarnings("all")
 public class Configurators {
 
     private static final Logger LOG = LoggerFactory.getLogger(Configurators.class);

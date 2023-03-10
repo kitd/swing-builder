@@ -119,8 +119,8 @@ public class ValidatingTextField<T> extends JTextField {
      * format is <i>&lt;int&gt;((e|E)&lt;int&gt;)?</i>. In laymen's terms: an integer optionally followed by a case 
      * insensitive "e" and another integer. This is scientific notation without the possibility of a decimal place. 
      * There is the additional restriction that the integer after the "e" must be unsigned (zero or greater).
-     * @param configuration
-     * @return
+     * @param configuration configuration
+     * @return ValidatingTextField
      */
     public static ValidatingTextField<Integer> largeintegerfield(Object... configuration) {
         Converter<Integer> largeIntegerConverter = new Converter<Integer>() {

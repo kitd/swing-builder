@@ -167,8 +167,8 @@ public class Configurators {
     /**
      * Takes a resource location (relative to this class, Configurators) and creates an image from that resource.
      *
-     * @param location
-     * @return
+     * @param location location
+     * @return Configurator
      */
     public static Configurator iconImage(String location) {
         return iconImage(new ImageIcon(Configurators.class.getResource(location)).getImage());
@@ -646,7 +646,7 @@ public class Configurators {
      *     I'm not clear on whether this bug is present in Java 9, scheduled to be released about a month from this
      *     writing.
      * </p>
-     * @return
+     * @return Object
      */
     public static Object[] disposeAndEmptyOnClose() {
         return
@@ -1079,8 +1079,8 @@ public class Configurators {
      * </p>
      * <p>For JList: Like JComboBox but no string wrapping occurs.</p>
      *
-     * @param items
-     * @return
+     * @param items items
+     * @return Configurator
      */
     public static Configurator items(Object... items) {
         return new Configurator() {
@@ -1236,10 +1236,10 @@ public class Configurators {
      * When searching for the method, the leaf of the class hierarchy is used and the
      * method arguments must also match <code>argTypes</code>.
      *
-     * @param c
-     * @param name
-     * @param argTypes
-     * @param args
+     * @param c c
+     * @param name name
+     * @param argTypes argTypes
+     * @param args args
      */
     protected static void invokeIfPresent(Component c, String name, Class[] argTypes, Object... args) {
         try {
@@ -1307,7 +1307,7 @@ public class Configurators {
          * properties on a Swing component that requires running on the EDT.  SwingBuilder is
          * designed to properly call this method without any effort by you.
          *
-         * @param c
+         * @param c c
          */
         protected abstract void apply(Component c);
     }

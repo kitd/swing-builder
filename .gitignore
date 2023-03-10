@@ -4,3 +4,4 @@
 # Ignore build output directories
 build
 out
+*.class
